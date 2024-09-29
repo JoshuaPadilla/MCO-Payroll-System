@@ -1,0 +1,82 @@
+<%- include("partials/header.ejs") %>
+
+    <div id="add-cont">
+        <form action="/add" method="POST">
+
+            <h1>New Employee</h1>
+
+            <div id="input-fields">
+
+                <div id="add-first-row">
+                    <div id="f-name">
+                        <label for="fName">First name</label>
+                        <input type="text" name="fName" required>
+                    </div>
+
+                    <div id="m-name">
+                        <label for="mName">Middle name</label>
+                        <input type="text" name="mName" required>
+                    </div>
+
+                    <div id="l-name">
+                        <label for="lName">Last name</label>
+                        <input type="text" name="lName" required>
+                    </div>
+                </div>
+
+                <div id="add-second-row">
+                    <div>
+                        <label for="bDay">Birthday</label>
+                        <input type="date" name="bDay" required>
+                    </div>
+
+                    <div id="num">
+                        <label for="num">Phone number</label>
+                        <input type="text" name="num" required>
+                    </div>
+                </div>
+
+                <div id="add-third-row">
+                    <div>
+                        <label for="position">Position</label>
+                        <input type="text" name="position" required>
+                    </div>
+
+                    <div>
+                        <label for="rateType">Rate type</label>
+                        <select name="rateType" id="rate-type">
+                            <option value="hour">Hourly</option>
+                            <option value="month">Daily</option>
+                            <option value="month">Monthly</option>
+                          </select>
+                    </div>
+
+                    <div>
+                        <label for="rate">Rate</label>
+                        
+                        <input type="number" name="rate" class="num-inputs" required>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div id="buttons">
+                <input type="submit" id="add-submit" class="buttons">
+                <button type="button" class="buttons" id="back-btn">Back</button>
+            </div>
+        </form>
+
+    </div>
+
+    <p id="error-msg" style="color: red; display: none;">Please enter a valid number!</p>
+
+<%- include("partials/footer.ejs") %>
+
+<!-- ID
+Name
+Position
+Salary
+Gross
+Tax
+Net Salary -->

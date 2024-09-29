@@ -1,0 +1,43 @@
+#dash-list {
+    grid-area: 11 / 3 / span 19 / span 9;
+    font-family: "Fredoka", sans-serif;
+}
+
+#dash-list table {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(74, 73, 71,.3);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#dash-list th {
+    text-align: start;
+    font-weight: 500;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(74, 73, 71,.8);
+    padding: 2px;
+}
+
+#dash-list td {
+    font-size: .9rem;
+    padding: 2px;
+    border-bottom: 1px solid rgba(74, 73, 71,.3);
+}
+
+#dash-list tr {
+    display: flex;
+}
+
+#dash-list td, th {
+    width: 19%;
+}
+
+#list-heading {
+    margin-bottom: 10px;
+}
+
+
+
+
+

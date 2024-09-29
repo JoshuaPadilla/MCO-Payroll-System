@@ -1,0 +1,63 @@
+#dash-history {
+    grid-area: 5 / 12 / span 25 / span 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    gap: 20px;
+    padding: 10px   ;
+    background-color: #87A2FF;
+    border-radius: 10px;
+    font-family: "Fredoka", sans-serif;
+    color: #EEF1FB;
+}
+
+#next-payroll {
+    grid-area: 1 / 1 / span 1 / span 1;
+    
+}
+
+#last-payroll {
+    grid-area: 1 / 2 / span 1 / span 1;
+    
+}
+
+#headcount {
+    grid-area: 2 / 1 / span 1 / span 1;
+    
+}
+
+#total-paid {
+    grid-area: 2 / 2 / span 1 / span 1;
+    
+}
+
+#pay-history {
+    grid-area: 3 / 1 / span 1 / span 2;
+    
+}
+
+.hist-items {
+    border:2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
+.dash-heading {
+    display: flex;
+    padding: 15px;
+}
+
+.dash-heading i {
+    margin-right: 10px;
+}
+
+.hist-items h1 {
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.hist-items > p {
+    text-align: center;
+    font-size: .8rem;
+}

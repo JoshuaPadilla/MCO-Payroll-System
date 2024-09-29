@@ -1,0 +1,121 @@
+<%- include("partials/header.ejs") %>
+    <!-- font-family: "Fredoka", sans-serif; -->
+    <div id="title-cont">
+        <h1>Dashboard</h1>
+    </div>
+
+    <div id="user-cont">
+        <div>
+            <h2>Joshua</h2>
+            <p>admin</p>
+        </div>
+
+        <img src="images/profile.jpg" alt="">
+    </div>
+
+    <div id="total-emp">
+        <div id="total-emp-heading">
+            <div><i class="fa-solid fa-user-group"></i></div>
+            <p>Total Employees</p>
+        </div>
+
+        <div id="emp-count">
+            <h1>120</h1>
+        </div>
+
+        <p>active employees</p>
+    </div>
+
+    <div id="quick-actions">
+        <div id="add-emp" class="quick-actions-cont">
+            <div class="action-icons" id="add-emp">
+                <i class="fa-solid fa-square-plus"></i>
+            </div>
+
+            <div class="action-text">
+                <h1>Add</h1>
+                <h1>Employee</h1>
+            </div>
+        </div>
+
+        <div id="new-payroll" class="quick-actions-cont">
+            <div class="action-icons">
+                <i class="fa-solid fa-file-invoice"></i>
+            </div>
+
+            <div class="action-text">
+                <h1>New</h1>
+                <h1>Payroll</h1>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="dash-list">
+        <div id="list-heading">
+            <p>Payroll history</p>
+        </div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+                <th>Gross</th>
+                <th>Tax</th>
+                <th>Net Salary</th>
+            </tr>
+
+            <%paylist.forEach((item) => { %>
+            <tr>
+                <td><%= item.empName %></td>
+                <td><%= item.position %></td>
+                <td><%= item.baseSalary %></td>
+                <td><%= item.gross %></td>
+                <td><%= item.tax %></td>
+                <td><%= item.net %></td>
+            </tr>
+            <%});%>
+        </table>
+    </div>
+
+    <div id="dash-history">
+        <div id="next-payroll" class="hist-items">
+            <div class="dash-heading">
+                <i class="fa-regular fa-calendar-xmark"></i>
+                <p>Next Payroll</p>
+            </div>
+            <h1>Sept 30</h1>
+            <p>this year</p>
+        </div>
+
+        <div id="last-payroll" class="hist-items">
+            <div class="dash-heading">
+                <i class="fa-regular fa-calendar-check"></i>
+                <p>Last Payroll</p>
+            </div>
+            <h1>Sept 17</h1>
+            <p>this year</p>
+        </div>
+
+        <div id="headcount" class="hist-items">
+            <div class="dash-heading">
+                <i class="fa-solid fa-user-check"></i>
+                <p>Headcount</p>
+            </div>
+            <h1>93</h1>
+            <p>active</p>
+        </div>
+
+        <div id="total-paid" class="hist-items">
+            <div class="dash-heading">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <p>Total Paid</p>
+            </div>
+            <h1>123k</h1>
+            <p>this month</p>
+        </div>
+
+        <div id="pay-history" class="hist-items"></div>
+    </div>
+
+<%- include("partials/footer.ejs") %>

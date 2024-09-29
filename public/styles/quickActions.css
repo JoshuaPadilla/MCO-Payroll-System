@@ -1,0 +1,30 @@
+#quick-actions {
+    grid-area: 5 / 6 / span 6 / span 6;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Fredoka", sans-serif;
+}
+
+.quick-actions-cont {
+    height: 100%;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 40px;
+    background-color: #EEF1FB;
+    border-radius: 10px;
+    border: 3px solid rgba(74, 73, 71,.2);
+}
+
+.action-icons {
+    font-size: 3rem;
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.action-text h1{
+    width: fit-content;
+    font-size: 1.5rem;
+    font-weight: 500;
+}

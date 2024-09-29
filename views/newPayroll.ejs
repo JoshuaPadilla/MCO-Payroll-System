@@ -1,0 +1,84 @@
+<%- include("partials/header.ejs") %>
+
+    <div id="new-payroll-cont">
+        <form action="/new-payroll" method="POST" id="newPayrollForm">
+            <h1>New Payroll</h1>
+
+            <div id="payroll-inputs">
+                <p>Payroll info</p>
+                <div id="first-row">
+                    <div>
+                        <label for="empName">Employee name:</label>
+                        <input type="text" name="empName" id="emp-name" class="pay-inputs" required>
+                    </div>
+
+                    <div>
+                        <label for="period">Period:</label>
+                        <div id="period">
+                            <input type="date" name="sDate" required>
+                            _
+                            <input type="date" name="eDate" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="payDate">Payment date:</label>
+                        <input type="text" name="payDate" id="pay-date" class="pay-inputs" required>
+                    </div>
+                </div>
+
+                <p>Salary details</p>
+                <div id="second-row">
+                    <div>
+                        <label for="baseSalary">Base salary:</label>
+                        <input type="number" name="baseSalary" class="pay-inputs num-inputs" id="baseSalary" required>
+                    </div>
+
+                    <div>
+                        <label for="hoursWorked">Hours worked:</label>
+                        <input type="number" name="hoursWorked" class="pay-inputs num-inputs" id="hoursWorked" required>
+                    </div>
+
+                    <div>
+                        <label for="OT">Overtime hours:</label>
+                        <input type="number" name="OT" class="pay-inputs num-inputs" id="OT" required>
+                    </div>
+
+                    <div>
+                        <label for="position">Position:</label>
+                        <input type="text" name="position" class="pay-inputs num-inputs">
+                    </div>
+                </div>
+
+                <p>Tax and Pay info</p>
+                <div id="third-row">
+                    <div>
+                        <label for="gross">Gross pay:</label>
+                        <input type="number" name="gross" class="num-inputs" id="grossPay" disabled>
+                    </div>
+
+                    <div>
+                        <label for="tax">Tax:</label>
+                        <input type="number" name="tax" class="num-inputs" id="tax" disabled>
+                    </div>
+
+                    <div>
+                        <label for="net">Net pay:</label>
+                        <input type="number" name="net" class="num-inputs" id="netPay" disabled>
+                    </div>
+
+                    
+                </div>
+
+                
+            </div>
+
+            <div id="submit">
+                <input type="submit" value="Confirm" class="pay-buttons">
+                <button type="button" class="pay-buttons" id="pay-back">Back</button>
+            </div>
+        </form>
+        
+    </div>
+
+<%- include("partials/footer.ejs") %>
